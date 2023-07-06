@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Rop.Winforms7.DerivedFromGenerator": {
+      "commandName": "Project"
+    },
+    "DebugComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\test.Derived\\test.Derived.csproj"
+    }
+  }
+}

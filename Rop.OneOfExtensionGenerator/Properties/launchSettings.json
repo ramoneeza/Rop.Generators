@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "OneOfExtensionGenerator": {
+      "commandName": "Project"
+    },
+    "DebugComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\test.oneofextensiongenerator\\test.oneofextensiongenerator.csproj"
+    }
+  }
+}

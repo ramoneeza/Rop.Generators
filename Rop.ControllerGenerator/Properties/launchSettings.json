@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Rop.Winforms7.ControllerGenerator": {
+      "commandName": "Project"
+    },
+    "DebugComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\test.winforms7\\test.winforms7.csproj"
+    }
+  }
+}

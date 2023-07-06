@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Title>Rop.ProxyGenerator.Annotations</Title>
+		<RootNamespace>Rop.ProxyGenerator.Annotations</RootNamespace>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+		<PackageTags>helper-classes;proxy;annotations</PackageTags>
+		<Description>Annotations for decorate Proxy Generator</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>1.0.18</Version>
+		<Authors>Ramon Ordiales Plaza</Authors>
+		<Company>Ramon Ordiales Plaza</Company>
+		<Copyright>2022 Ramon Ordiales</Copyright>
+		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+		<RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/ramoneeza/Rop.ProxyGenerator</PackageProjectUrl>
+		<PackageReadmeFile>Readme.md</PackageReadmeFile>
+		<PackageId>Rop.ProxyGenerator.Annotations</PackageId>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="Packs\**" />
+		<EmbeddedResource Remove="Packs\**" />
+		<None Remove="Packs\**" />
+		<None Include="..\Readme.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+</Project>

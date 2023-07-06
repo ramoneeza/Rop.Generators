@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Rop.Winforms7.StaticExtensionGenerator": {
+      "commandName": "Project"
+    },
+    "DebugComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\test.StaticExtension\\test.StaticExtension.csproj"
+    }
+  }
+}

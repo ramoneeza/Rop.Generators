@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Rop.ProxyGenerator": {
+      "commandName": "Project"
+    },
+    "DebugComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\test.winforms\\test.winforms.csproj"
+    }
+  }
+}
