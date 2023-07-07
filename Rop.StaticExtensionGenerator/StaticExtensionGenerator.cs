@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Rop.GeneratorHelper;
+using Rop.Generators.Shared;
 
 namespace Rop.Winforms7.StaticExtensionGenerator
 {
@@ -12,12 +12,6 @@ namespace Rop.Winforms7.StaticExtensionGenerator
     {
         public void Initialize(GeneratorInitializationContext context)
         {
-//#if DEBUG
-//            if (!Debugger.IsAttached)
-//            {
-//                Debugger.Launch();
-//            }
-//#endif
             context.RegisterForSyntaxNotifications(() => new ClassesToAugmentReceiver());
         }
         public void Execute(GeneratorExecutionContext context)

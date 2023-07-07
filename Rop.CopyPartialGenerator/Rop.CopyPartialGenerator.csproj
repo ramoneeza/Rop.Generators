@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 <PropertyGroup>
 	<PackageId>Rop.CopyPartialGenerator</PackageId>
 	<Title>Rop.CopyPartialGenerator</Title>
@@ -32,4 +32,5 @@
 	<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.1.0" PrivateAssets="all" />
 	<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="all" />
 	</ItemGroup>
+	<Import Project="..\Rop.Generators.Shared\Rop.Generators.Shared.projitems" Label="Shared" />
 </Project>

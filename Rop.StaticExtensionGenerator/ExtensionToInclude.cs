@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Rop.GeneratorHelper;
+using Rop.Generators.Shared;
 
 namespace Rop.Winforms7.StaticExtensionGenerator
 {

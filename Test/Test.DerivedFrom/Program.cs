@@ -1,4 +1,6 @@
-﻿namespace Test.Derived;
+﻿using Rop.DerivedFrom.Annotations;
+
+namespace Test.Derived;
 
 internal class Program
 {
@@ -16,10 +18,6 @@ public class BaseForm<A, B>
     {
         return default;
     }
-}
-
-public interface IDerivedFrom<out T>
-{
 }
 
 public partial class Form1 : IDerivedFrom<BaseForm<int, bool>>

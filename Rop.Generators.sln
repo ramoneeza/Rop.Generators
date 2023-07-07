@@ -32,7 +32,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.OneOfExtensionGenerato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.DerivedFrom", "Test\Test.DerivedFrom\Test.DerivedFrom.csproj", "{3823745B-AED0-402E-AE0B-2277E3A24A34}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.StaticExtension", "Test\Test.StaticExtension\Test.StaticExtension.csproj", "{1323FB30-4474-488B-AC84-E22ED4887040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.StaticExtensions", "Test\Test.StaticExtension\Test.StaticExtensions.csproj", "{1323FB30-4474-488B-AC84-E22ED4887040}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.ControllerGenerator", "Rop.ControllerGenerator\Rop.ControllerGenerator.csproj", "{59CBDAF7-857A-47D6-AE57-0D069F5D925F}"
 EndProject
@@ -40,11 +40,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.DerivedFromGenerator", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.StaticExtensionGenerator", "Rop.StaticExtensionGenerator\Rop.StaticExtensionGenerator.csproj", "{5A2BDD1D-9A9B-42BF-B00C-4104CEB957F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rop.ControllerGenerator.Annotations", "Rop.ControllerGenerator.Annotations\Rop.ControllerGenerator.Annotations.csproj", "{97A781B7-95A8-4A1C-BBD2-2463A9BEB5AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.ControllerGenerator.Annotations", "Rop.ControllerGenerator.Annotations\Rop.ControllerGenerator.Annotations.csproj", "{97A781B7-95A8-4A1C-BBD2-2463A9BEB5AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rop.DerivedFrom.Annotations", "Rop.DerivedFrom.Annotations\Rop.DerivedFrom.Annotations.csproj", "{6A90600D-4829-4453-BEB5-6FEBAC9D049F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.DerivedFrom.Annotations", "Rop.DerivedFrom.Annotations\Rop.DerivedFrom.Annotations.csproj", "{6A90600D-4829-4453-BEB5-6FEBAC9D049F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rop.StaticExtension.Annotations", "Rop.StaticExtension.Annotations\Rop.StaticExtension.Annotations.csproj", "{20C84D28-B7D0-41E5-BD4E-759F7D11CCA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.StaticExtension.Annotations", "Rop.StaticExtension.Annotations\Rop.StaticExtension.Annotations.csproj", "{20C84D28-B7D0-41E5-BD4E-759F7D11CCA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ControllerGenerator", "Test\Test.ControllerGenerator\Test.ControllerGenerator.csproj", "{7EBAA8C5-695E-40CB-885B-B907929C7702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,6 +122,10 @@ Global
 		{20C84D28-B7D0-41E5-BD4E-759F7D11CCA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20C84D28-B7D0-41E5-BD4E-759F7D11CCA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20C84D28-B7D0-41E5-BD4E-759F7D11CCA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -130,11 +136,18 @@ Global
 		{8D959B4E-8953-4FCA-A5C7-E3F6206EC47A} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 		{3823745B-AED0-402E-AE0B-2277E3A24A34} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 		{1323FB30-4474-488B-AC84-E22ED4887040} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
+		{7EBAA8C5-695E-40CB-885B-B907929C7702} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28136F61-670C-48E3-872A-9242018602A1}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{10ed2d2d-6d3d-4570-b78c-f61b52328596}*SharedItemsImports = 5
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{568ee803-f01b-4f45-ba81-70642128a797}*SharedItemsImports = 5
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{59cbdaf7-857a-47d6-ae57-0d069f5d925f}*SharedItemsImports = 5
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{5a2bdd1d-9a9b-42bf-b00c-4104ceb957f6}*SharedItemsImports = 5
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{86231b22-cb3a-4de0-af41-c26710435cc9}*SharedItemsImports = 5
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{8f79abde-e5ad-421d-be65-0042f27b104b}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{b6fa2a36-63eb-4074-b174-3e85b96e4265}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

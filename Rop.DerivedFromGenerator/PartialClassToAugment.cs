@@ -4,67 +4,40 @@ using System.IO;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Rop.GeneratorHelper;
+using Rop.Generators.Shared;
+using Rop.GeneratorShared;
+
 
 namespace Rop.Winforms7.DerivedFromGenerator
 {
-    public class PartialClassToAugment
+    public class PartialClassToAugment:BasePartialClassToAugment
     {
-        public bool IsStatic { get; }
-        public bool IsGeneric { get; }
-        public string GenericTypes { get; }
-        public string Identifier { get; }
-        public string FileName { get;  }
-        public string Namespace { get;  }
-        public string Modifier { get; }
-        public IReadOnlyList<(string name, string sentence)> Usings { get;  }
-        public ClassDeclarationSyntax Original { get; }
-        public PartialClassToAugment(ClassDeclarationSyntax classToAugment)
+        public PartialClassToAugment(ClassDeclarationSyntax classToAugment) : base(classToAugment)
         {
-            Original= classToAugment;
-            Identifier = classToAugment.Identifier.ToString();
-            var stfp = Path.GetFileNameWithoutExtension(classToAugment.SyntaxTree.FilePath);
-            FileName = (string.IsNullOrEmpty(stfp)) ? Identifier : stfp;
-            Usings = classToAugment.SyntaxTree.GetUsings().ToList();
-            Namespace = classToAugment.SyntaxTree.GetNamespace();
-            Modifier = classToAugment.Modifiers.FirstOrDefault().ToString();
-            IsStatic = classToAugment.IsStatic();
-            IsGeneric = classToAugment.IsGeneric();
-            GenericTypes = (IsGeneric) ? classToAugment.TypeParameterList?.ToString()??"" : "";
         }
 
-        public IEnumerable<string> GetHeader() => GetHeader(Array.Empty<string>());
+       public IEnumerable<string> GetClassNew(string formname,string newname,string basename)
+        {
+            yield return $"\tpublic abstract class {newname}:{basename}{{}}";
+            yield return $"\tpublic partial class {formname}:{newname}{{}}";
+        }
+
+        public new IEnumerable<string> GetHeader() => this.GetHeader(Array.Empty<string>());
         public IEnumerable<string> GetHeader(IEnumerable<string> additionalusings)
         {
-            yield return "#nullable enable";
-            foreach (var u in Usings)
+            return GetHeader0().Concat(GetHeader1()).Concat(GetNamespace0());
+            // Local functions
+            IEnumerable<string> GetHeader1()
             {
-                yield return u.sentence;
+                foreach (var additionalusing in additionalusings)
+                {
+                    yield return $"using {additionalusing};";
+                }
             }
-
-            foreach (var additionalusing in additionalusings)
-            {
-                yield return $"using {additionalusing};";
-            }
-            yield return $"namespace {Namespace}";
-            yield return "{";
         }
-        public IEnumerable<string> GetFooter()
+        public override IEnumerable<string> GetFooter()
         {
             yield return "}";
         }
     }
-
-    public class ProxyPartialClassToAugment
-    {
-        public PartialClassToAugment Original { get; }
-        public TypeSyntax BaseToFlat { get; }
-
-        public ProxyPartialClassToAugment(PartialClassToAugment original, TypeSyntax baseToFlat)
-        {
-            Original = original;
-            BaseToFlat = baseToFlat;
-        }
-    }
-
 }

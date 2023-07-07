@@ -1,11 +1,11 @@
 ﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Rop.Generators.Shared;
 
 namespace Rop.ProxyGenerator
 {
@@ -23,12 +23,6 @@ namespace Rop.ProxyGenerator
 
         public void Initialize(GeneratorInitializationContext context)
         {
-//#if DEBUG
-//            if (!Debugger.IsAttached)
-//            {
-//                Debugger.Launch();
-//            }
-//#endif
             context.RegisterForSyntaxNotifications(() => new ProxyClassesToAugmentReceiver());
 
         }
@@ -279,28 +273,5 @@ namespace Rop.ProxyGenerator
                 ClassesToAugment = new ConcurrentBag<ProxyClassToAugment>();
             }
         }
-    }
-
-    public class IncludesAtts
-    {
-        public List<string> AttsToInclude { get; } = new List<string>();
-        public IncludesAtts(ISymbol namedTypeSymbol)
-        {
-            var nextatts = namedTypeSymbol.GetAttributes().SkipWhile(a => a.GetShortName() != "IncludeNextAttributes")
-                .ToList();
-            if (nextatts.Any())
-            {
-                AttsToInclude.AddRange(nextatts.Skip(1).Select(a=>a.ToString()));
-            }
-        }
-
-        public void Render(StringBuilder sb, int tabs)
-        {
-            foreach (var att in AttsToInclude)
-            {
-                sb.AppendLines(tabs,$"[{att}]");
-            }
-        }
-        public bool IsEmpty => AttsToInclude.Count == 0;
     }
 }

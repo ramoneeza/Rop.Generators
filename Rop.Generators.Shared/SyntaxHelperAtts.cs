@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Rop.Generators.Shared
 {
@@ -15,7 +15,7 @@ namespace Rop.Generators.Shared
         /// <summary>
         /// Member is decorated with some attribute
         /// </summary>
-        public static bool IsDecoratedWith(this MemberDeclarationSyntax item, string attname,params string[] attname2) => IsDecoratedWith(item, attname2.Prepend(attname),out _);
+        public static bool IsDecoratedWith(this MemberDeclarationSyntax item, string attname, params string[] attname2) => IsDecoratedWith(item, attname2.Prepend(attname), out _);
 
         /// <summary>
         /// Member is decorated with some attribute
@@ -26,7 +26,7 @@ namespace Rop.Generators.Shared
         /// <summary>
         /// Member is decorated with some attribute
         /// </summary>
-        public static bool IsDecoratedWith(this MemberDeclarationSyntax item, string attname,out AttributeSyntax decorated)
+        public static bool IsDecoratedWith(this MemberDeclarationSyntax item, string attname, out AttributeSyntax decorated)
         {
             decorated = GetDecoratedWith(item, attname);
             return decorated != null;
@@ -35,7 +35,7 @@ namespace Rop.Generators.Shared
         /// <summary>
         /// Member is decorated with some attribute
         /// </summary>
-        public static bool IsDecoratedWith(this MemberDeclarationSyntax item,IEnumerable<string> attnames,out AttributeSyntax decorated)
+        public static bool IsDecoratedWith(this MemberDeclarationSyntax item, IEnumerable<string> attnames, out AttributeSyntax decorated)
         {
             decorated = GetDecoratedWith(item, attnames);
             return decorated != null;
@@ -46,7 +46,7 @@ namespace Rop.Generators.Shared
         /// <param name="item"></param>
         /// <param name="attnames"></param>
         /// <returns></returns>
-        public static bool IsDecoratedWith(this MemberDeclarationSyntax item,ImmutableHashSet<string> attnames,out AttributeSyntax decorated)
+        public static bool IsDecoratedWith(this MemberDeclarationSyntax item, ImmutableHashSet<string> attnames, out AttributeSyntax decorated)
         {
             decorated = GetDecoratedWith(item, attnames);
             return decorated != null;
@@ -66,32 +66,43 @@ namespace Rop.Generators.Shared
         {
             return GetAttributes(item).Where(a => a.Name.ToString().Equals(attname)).ToArray();
         }
+        public static string IsDecoratedWithAny(this AttributeSyntax att, params string[] attnames)
+        {
+            var name = att.Name.ToString();
+            return attnames.FirstOrDefault(a => a.Equals(name)) ?? "";
+        }
+
+        public static AttributeSyntax[] GetDecoratedWithAny(this MemberDeclarationSyntax item, params string[] attnames)
+        {
+            return GetAttributes(item).Where(a => a.IsDecoratedWithAny(attnames) != "").ToArray();
+        }
+
         /// <summary>
         /// Get many decorated attributes for a class
         /// </summary>
         public static AttributeSyntax[] GetDecoratedWithSomeGeneric(this MemberDeclarationSyntax item, string attname)
         {
-            var genattname=attname+"<";
+            var genattname = attname + "<";
             return GetAttributes(item).Where(a => a.Name.ToString().StartsWith(genattname)).ToArray();
         }
 
         /// <summary>
         /// Get decorated attribute for a class
         /// </summary>
-        public static AttributeSyntax GetDecoratedWith(this MemberDeclarationSyntax item,IEnumerable<string> attname)
+        public static AttributeSyntax GetDecoratedWith(this MemberDeclarationSyntax item, IEnumerable<string> attname)
         {
             var lst = attname.ToImmutableHashSet();
             return GetDecoratedWith(item, lst);
         }
-        public static AttributeSyntax GetDecoratedWith(this MemberDeclarationSyntax item,ImmutableHashSet<string> attnames)
+        public static AttributeSyntax GetDecoratedWith(this MemberDeclarationSyntax item, ImmutableHashSet<string> attnames)
         {
-            return GetAttributes(item).FirstOrDefault(a =>a.Name.ToString().InList(attnames));
+            return GetAttributes(item).FirstOrDefault(a => a.Name.ToString().InList(attnames));
         }
-        
-        public static AttributeSyntax GetDecoratedWith(this MemberDeclarationSyntax item, string attname,params string[] attname2)
+
+        public static AttributeSyntax GetDecoratedWith(this MemberDeclarationSyntax item, string attname, params string[] attname2)
         {
             var lst = attname2.Prepend(attname);
-            return GetDecoratedWith(item,lst);
+            return GetDecoratedWith(item, lst);
         }
     }
 }

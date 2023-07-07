@@ -4,19 +4,14 @@ using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Rop.Generators.Shared;
+using Rop.GeneratorShared;
 
 namespace Rop.CopyPartialGenerator
 {
-    internal enum CopyTypeEnum
-    {
-        CopyClass,
-        CopyImmutable,
-        CopyEditable
-    }
-
     public class CopyClassToAugment
     {
-        internal CopyTypeEnum AttType { get; }
+        public CopyTypeEnum AttType { get; }
         public PartialClassToAugment ClassToAugment { get;}
         public string NewClassName { get;}
         public BaseListSyntax BaseList { get; }

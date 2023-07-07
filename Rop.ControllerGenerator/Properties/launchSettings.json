@@ -5,7 +5,7 @@
     },
     "DebugComponent": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "..\\test.winforms7\\test.winforms7.csproj"
+      "targetProject": "..\\tests\test.controllerGenerator\\test.controllergenerator.csproj"
     }
   }
 }

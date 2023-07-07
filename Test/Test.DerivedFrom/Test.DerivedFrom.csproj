@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Rop.Winforms7.DerivedFromGenerator" Version="1.0.2" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\Rop.DerivedFrom.Annotations\Rop.DerivedFrom.Annotations.csproj" />
+    <ProjectReference Include="..\..\Rop.DerivedFromGenerator\Rop.DerivedFromGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
 
 </Project>

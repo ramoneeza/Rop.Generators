@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Rop.Generators.Shared;
 
 namespace Rop.ProxyGenerator
 {

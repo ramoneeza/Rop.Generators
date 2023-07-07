@@ -2,6 +2,7 @@
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Rop.Generators.Shared;
 
 namespace Rop.OneOfExtensionGenerator
 {

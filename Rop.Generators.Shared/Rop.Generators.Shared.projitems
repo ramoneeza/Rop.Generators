@@ -9,6 +9,7 @@
     <Import_RootNamespace>Rop.GeneratorShared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BasePartialClassToAugment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SymbolHelperAtts.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SyntaxHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SyntaxHelperAtts.cs" />
