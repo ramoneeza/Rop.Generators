@@ -9,13 +9,13 @@
 	  <PackageTags>helper-classes;extensions;oneof;source generator;roslyn</PackageTags>
 	  <Description>Source generator to create OneOf Helper Extensions</Description>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>1.0.4</Version>
+	  <Version>1.0.7</Version>
 	  <Authors>Ramon Ordiales Plaza</Authors>
 	  <Company>Ramon Ordiales Plaza</Company>
 	  <Copyright>2022 Ramon Ordiales</Copyright>
 	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 	  <RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
-	  <PackageProjectUrl>https://github.com/ramoneeza/Rop.OneOfExtensionGenerator</PackageProjectUrl>
+	  <PackageProjectUrl>https://github.com/ramoneeza/Rop.Generators</PackageProjectUrl>
 	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
 	  <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
@@ -27,7 +27,7 @@
 		<Compile Remove="Packs\**" />
 		<EmbeddedResource Remove="Packs\**" />
 		<None Remove="Packs\**" />
-		<None Include="..\Readme.md" Pack="true" PackagePath="\" />
+		<None Include="Readme.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
   <ItemGroup Label="Package References">
 	  <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.1.0" PrivateAssets="all" />

@@ -1,19 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<PackageId>Rop.Winforms7.ControllerGenerator</PackageId>
-		<Title>Rop.Winforms7.ControllerGenerator</Title>
+		<PackageId>Rop.ControllerGenerator</PackageId>
+		<Title>Rop.ControllerGenerator</Title>
 		<TargetFramework>netstandard2.0</TargetFramework>
 		<IsRoslynComponent>true</IsRoslynComponent>
-		<RootNamespace>Rop.Winforms7.ControllerGenerator</RootNamespace>
+		<RootNamespace>Rop.ControllerGenerator</RootNamespace>
 		<PackageTags>extensions;controllers;winforms;source-generator;roslyn</PackageTags>
 		<Description>Source generator to insert controllers</Description>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.0.1</Version>
+		<Version>1.0.5</Version>
 		<Authors>Ramon Ordiales Plaza</Authors>
 		<Company>Ramon Ordiales Plaza</Company>
 		<Copyright>2023 Ramon Ordiales</Copyright>
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/ramoneeza/Rop.Generators</PackageProjectUrl>
 		<PackageReadmeFile>Readme.md</PackageReadmeFile>
 		<IncludeBuildOutput>false</IncludeBuildOutput>
 		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>

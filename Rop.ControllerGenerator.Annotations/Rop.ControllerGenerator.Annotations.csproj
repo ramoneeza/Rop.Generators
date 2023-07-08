@@ -1,8 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+	  <PackageId>Rop.ControllerGenerator.Annotations</PackageId>
+	  <Title>Rop.ControllerGenerator.Annotations</Title>
+	  <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
+	  <PackageTags>extensions;controllers;winforms;source-generator;roslyn</PackageTags>
+	  <Description>Annotations to ControllerGenerator</Description>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Version>1.0.4</Version>
+	  <Authors>Ramon Ordiales Plaza</Authors>
+	  <Company>Ramon Ordiales Plaza</Company>
+	  <Copyright>2023 Ramon Ordiales</Copyright>
+	  <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+	  <RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
+	  <PackageProjectUrl>https://github.com/ramoneeza/Rop.Generators</PackageProjectUrl>
+	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
+	  <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
+
+ 
+	  <ItemGroup>
+		  <Compile Remove="Packs\**" />
+		  <EmbeddedResource Remove="Packs\**" />
+		  <None Remove="Packs\**" />
+		  <None Include=".\Readme.md" Pack="true" PackagePath="\" />
+	  </ItemGroup>
+ 
 
 </Project>
