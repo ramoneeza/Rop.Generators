@@ -1,21 +1,18 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Rop.Generators.Shared;
 using Rop.GeneratorShared;
 
-namespace Rop.Winforms7.ControllerGenerator
+namespace Rop.ControllerGenerator
 {
     public class PartialClassToAugment:BasePartialClassToAugment
     {
         public PartialClassToAugment(ClassDeclarationSyntax classToAugment) : base(classToAugment)
         {
         }
-        public IEnumerable<string> GetHeader(IEnumerable<string> additionalusings)
+        public IEnumerable<string> GetHeader(IEnumerable<string> additionalusings,IEnumerable<string> controllerproperties)
         {
-            return GetHeader0().Concat(GetHeader1()).Concat(GetNamespace0()).Concat(GetClass0());
+            return GetHeader0().Concat(GetHeader1()).Concat(GetNamespace0()).Concat(Attributes1(controllerproperties)).Concat(GetClass0());
             // Local functions
             IEnumerable<string> GetHeader1()
             {
@@ -24,6 +21,11 @@ namespace Rop.Winforms7.ControllerGenerator
                     yield return $"using {additionalusing};";
                 }
             }
+        }
+
+        public IEnumerable<string> Attributes1(IEnumerable<string> controllerproperties)
+        {
+            return controllerproperties.Select(p => $"\t\t[MemberNotNull(nameof({p}))]");
         }
     }
 }

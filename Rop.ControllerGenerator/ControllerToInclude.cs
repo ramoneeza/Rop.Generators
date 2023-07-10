@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Rop.Generators.Shared;
 
-namespace Rop.Winforms7.ControllerGenerator
+namespace Rop.ControllerGenerator
 {
     public class ControllerToInclude
     {

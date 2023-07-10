@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <PackageId>Rop.ControllerGenerator.Annotations</PackageId>
 	  <Title>Rop.ControllerGenerator.Annotations</Title>
-	  <TargetFramework>net7.0</TargetFramework>
-    <Nullable>enable</Nullable>
-	  <PackageTags>extensions;controllers;winforms;source-generator;roslyn</PackageTags>
+	  <RootNamespace>Rop.ControllerGenerator.Annotations</RootNamespace>
+	  <PackageId>Rop.ControllerGenerator.Annotations</PackageId>
+	  <TargetFramework>netstandard2.0</TargetFramework>
+      <PackageTags>extensions;controllers;winforms;source-generator;roslyn</PackageTags>
 	  <Description>Annotations to ControllerGenerator</Description>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>1.0.4</Version>
+	  <Version>1.0.7</Version>
 	  <Authors>Ramon Ordiales Plaza</Authors>
 	  <Company>Ramon Ordiales Plaza</Company>
 	  <Copyright>2023 Ramon Ordiales</Copyright>
@@ -16,11 +16,8 @@
 	  <RepositoryUrl>https://api.nuget.org/v3/index.json</RepositoryUrl>
 	  <PackageProjectUrl>https://github.com/ramoneeza/Rop.Generators</PackageProjectUrl>
 	  <PackageReadmeFile>Readme.md</PackageReadmeFile>
-	  <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
-
- 
-	  <ItemGroup>
+	<ItemGroup>
 		  <Compile Remove="Packs\**" />
 		  <EmbeddedResource Remove="Packs\**" />
 		  <None Remove="Packs\**" />

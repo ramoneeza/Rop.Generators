@@ -19,7 +19,7 @@ Rop.Generators is a free and open source project, licensed under the MIT license
 
 Each package is published in nuget
 
-Rop.ControllerGenerator
+Rop.ControllerGenerator 
 ------------------------
 This generator is designed to automate the creation of controllers for any application.
 This is specialy userful for WinForms applications, but can be used in any other type of application.
