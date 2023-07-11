@@ -18,7 +18,7 @@ namespace Rop.Winforms7.DerivedFromGenerator
 
        public IEnumerable<string> GetClassNew(string formname,string newname,string basename)
         {
-            yield return $"\tpublic abstract class {newname}:{basename}{{}}";
+            yield return $"\tpublic class {newname}:{basename}{{}}";
             yield return $"\tpublic partial class {formname}:{newname}{{}}";
         }
 
