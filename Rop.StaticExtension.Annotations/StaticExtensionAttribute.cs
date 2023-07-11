@@ -1,9 +1,16 @@
 ﻿namespace Rop.StaticExtension.Annotations;
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-public class StaticExtensionAttribute<T>:Attribute
+[AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
+public class StaticExtensionAttribute:Attribute
 {
     public StaticExtensionAttribute()
+    {
+    }
+}
+[AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
+public class InsertStaticExtensions:Attribute
+{
+    public InsertStaticExtensions()
     {
     }
 }

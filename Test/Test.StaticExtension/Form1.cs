@@ -1,14 +1,17 @@
 ﻿namespace Test.StaticExtensions;
 using Rop.StaticExtension.Annotations;
 
-[StaticExtension<MyStaticExtension<Form1,int,bool>>()]
-public partial class Form1 : BaseForm<int, bool>
+[InsertStaticExtensions]
+public partial class Form1 : BaseFormIntBool
 {
     public void Hola()
     {
         var x = SoyDeBaseForm();
         Console.WriteLine(x.ToString());
+        Execute(true);
     }
+}
 
-    public static int Execute2(bool b)=>MyStaticExtension<Form1,int,bool>.Execute(b);
+public class BaseFormIntBool : BaseForm<int, bool>
+{
 }
