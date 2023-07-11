@@ -8,6 +8,6 @@ internal class Program
     private static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
-        //Form1.Execute(true);
+        Form1.Execute(true);
     }
 }

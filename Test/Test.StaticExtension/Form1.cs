@@ -12,6 +12,6 @@ public partial class Form1 : BaseFormIntBool
     }
 }
 
-public class BaseFormIntBool : BaseForm<int, bool>
+public class BaseFormIntBool : Test.SubDll.BaseForm<int, bool>
 {
 }

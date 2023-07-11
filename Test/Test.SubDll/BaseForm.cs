@@ -1,6 +1,6 @@
 ﻿using Rop.StaticExtension.Annotations;
 
-namespace Test.StaticExtensions;
+namespace Test.SubDll;
 
 public class BaseForm<A, B>
 {

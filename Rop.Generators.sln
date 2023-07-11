@@ -48,6 +48,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.StaticExtension.Annotat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ControllerGenerator", "Test\Test.ControllerGenerator\Test.ControllerGenerator.csproj", "{7EBAA8C5-695E-40CB-885B-B907929C7702}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.SubDll", "Test\Test.SubDll\Test.SubDll.csproj", "{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,10 @@ Global
 		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EBAA8C5-695E-40CB-885B-B907929C7702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -137,6 +143,7 @@ Global
 		{3823745B-AED0-402E-AE0B-2277E3A24A34} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 		{1323FB30-4474-488B-AC84-E22ED4887040} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 		{7EBAA8C5-695E-40CB-885B-B907929C7702} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
+		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28136F61-670C-48E3-872A-9242018602A1}

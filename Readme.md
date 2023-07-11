@@ -100,8 +100,10 @@ Rop.StaticExtensionGenerator
 Rop.StaticExtensionGenerator is a source generator package to automatic static extension methods.
 It can be used to provide static extension methods to classes. The current c# languaje does not allow to create static extension methods.
 
--The class to contain the static extension must be a generic class where the first generic type is the type class to be extended.
--The class where implement the static extension must be decorated with the attribute `[StaticExtension<MyStaticExtension<T,...>>()]`
+-The static method to contain the static extension must be a generic class where the first generic type is the type class to be extended.
+-This method has to be decorated with the attribute `[StaticExtension]`
+-This method has to be included in one of the base class of the class to be extended.
+-The class where implement the static extension must be decorated with the attribute `[InsertStaticExtensions]`
 
 The nuget package Rop.StaticExtensionGenerator.Annotations is required in order to use the attributes.
 

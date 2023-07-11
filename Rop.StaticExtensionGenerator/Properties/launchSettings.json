@@ -5,7 +5,10 @@
     },
     "DebugComponent": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "E:\\Dropbox\\ROAMING\\Visual Studio 2022\\Snippers\\Rop.Generators\\Test\\Test.StaticExtension\\Test.StaticExtensions.csproj"
+      "targetProject": "E:\\Dropbox\\ROAMING\\Visual Studio 2022\\Snippers\\Rop.Generators\\Test\\Test.StaticExtension\\Test.StaticExtensions.csproj",
+      "environmentVariables": {
+        "RunAfterBuild": "pause"
+      }
     }
   }
 }
