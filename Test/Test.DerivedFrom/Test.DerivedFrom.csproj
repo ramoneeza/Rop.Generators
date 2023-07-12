@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Rop.DerivedFrom.Annotations\Rop.DerivedFrom.Annotations.csproj" />
-    <ProjectReference Include="..\..\Rop.DerivedFromGenerator\Rop.DerivedFromGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\..\Rop.DerivedFromGenerator\Rop.DerivedFromGenerator.csproj" />
   </ItemGroup>
 
 </Project>
