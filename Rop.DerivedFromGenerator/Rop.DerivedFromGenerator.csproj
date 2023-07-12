@@ -8,7 +8,7 @@
 	  <PackageTags>extensions;generics;winforms;source-generator;roslyn</PackageTags>
 	  <Description>Source generator to derive form from generic</Description>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>1.0.4</Version>
+	  <Version>1.0.6</Version>
 	  <Authors>Ramon Ordiales Plaza</Authors>
 	  <Company>Ramon Ordiales Plaza</Company>
 	  <Copyright>2023 Ramon Ordiales</Copyright>
