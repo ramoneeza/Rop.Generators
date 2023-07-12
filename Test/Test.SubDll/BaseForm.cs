@@ -11,10 +11,16 @@ public class BaseForm<A, B>
     }
 
     [StaticExtension]
-    public static A Execute<T>(B item) where T : BaseForm<A, B>,new()
+    public static Result<A> Execute<T>(B item) where T : BaseForm<A, B>,new()
     {
         var t = new T();
         t.ItemB = item;
-        return t.SoyDeBaseForm();
+        var r=new Result<A>();
+        r.Value= t.SoyDeBaseForm();
+        return r;
     }
+}
+public class Result<T>
+{
+    public T Value { get; set; }
 }

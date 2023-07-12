@@ -48,7 +48,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.StaticExtension.Annotat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ControllerGenerator", "Test\Test.ControllerGenerator\Test.ControllerGenerator.csproj", "{7EBAA8C5-695E-40CB-885B-B907929C7702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.SubDll", "Test\Test.SubDll\Test.SubDll.csproj", "{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.SubDll", "Test\Test.SubDll\Test.SubDll.csproj", "{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.DerivedFrom.SubForms", "Test\Test.DerivedFrom.SubForms\Test.DerivedFrom.SubForms.csproj", "{B25FF9C7-96A8-4667-8475-080B396280BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.DerivedFrom.FormDerived", "Test\Test.DerivedFrom.FormDerived\Test.DerivedFrom.FormDerived.csproj", "{BECC3846-2D46-4586-84C4-7E1AE321A96C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,6 +136,14 @@ Global
 		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B25FF9C7-96A8-4667-8475-080B396280BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B25FF9C7-96A8-4667-8475-080B396280BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B25FF9C7-96A8-4667-8475-080B396280BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B25FF9C7-96A8-4667-8475-080B396280BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BECC3846-2D46-4586-84C4-7E1AE321A96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BECC3846-2D46-4586-84C4-7E1AE321A96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BECC3846-2D46-4586-84C4-7E1AE321A96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BECC3846-2D46-4586-84C4-7E1AE321A96C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +156,8 @@ Global
 		{1323FB30-4474-488B-AC84-E22ED4887040} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 		{7EBAA8C5-695E-40CB-885B-B907929C7702} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 		{05FADFDF-5E2E-4088-A7E9-B4F8F6A8CAE7} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
+		{B25FF9C7-96A8-4667-8475-080B396280BA} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
+		{BECC3846-2D46-4586-84C4-7E1AE321A96C} = {F10EFED0-5CB0-40A6-849D-ADD8A497A930}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28136F61-670C-48E3-872A-9242018602A1}
@@ -152,7 +166,6 @@ Global
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{10ed2d2d-6d3d-4570-b78c-f61b52328596}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{568ee803-f01b-4f45-ba81-70642128a797}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{59cbdaf7-857a-47d6-ae57-0d069f5d925f}*SharedItemsImports = 5
-		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{5a2bdd1d-9a9b-42bf-b00c-4104ceb957f6}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{86231b22-cb3a-4de0-af41-c26710435cc9}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{8f79abde-e5ad-421d-be65-0042f27b104b}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{b6fa2a36-63eb-4074-b174-3e85b96e4265}*SharedItemsImports = 13

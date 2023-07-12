@@ -9,4 +9,7 @@ namespace Rop.DerivedFrom.Annotations
     public interface IDerivedFrom<out T>
     {
     }
+    public interface IFormDerivedFrom<out T>
+    {
+    }
 }

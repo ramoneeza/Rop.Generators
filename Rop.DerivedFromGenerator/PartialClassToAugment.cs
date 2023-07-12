@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Rop.Generators.Shared;
 using Rop.GeneratorShared;
 
-
-namespace Rop.Winforms7.DerivedFromGenerator
+namespace Rop.DerivedFromGenerator
 {
     public class PartialClassToAugment:BasePartialClassToAugment
     {
@@ -16,9 +12,8 @@ namespace Rop.Winforms7.DerivedFromGenerator
         {
         }
 
-       public IEnumerable<string> GetClassNew(string formname,string newname,string basename)
+       public IEnumerable<string> GetClassNew(string formname,string newname)
         {
-            yield return $"\tpublic class {newname}:{basename}{{}}";
             yield return $"\tpublic partial class {formname}:{newname}{{}}";
         }
 

@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-	  <PackageId>Rop.Winforms7.DerivedFromGenerator</PackageId>
-	  <Title>Rop.Winforms7.DerivedFromGenerator</Title>
+	  <PackageId>Rop.DerivedFromGenerator</PackageId>
+	  <Title>Rop.DerivedFromGenerator</Title>
 	  <TargetFramework>netstandard2.0</TargetFramework>
 	  <IsRoslynComponent>true</IsRoslynComponent>
-	  <RootNamespace>Rop.Winforms7.DerivedFromGenerator</RootNamespace>
+	  <RootNamespace>Rop.DerivedFromGenerator</RootNamespace>
 	  <PackageTags>extensions;generics;winforms;source-generator;roslyn</PackageTags>
 	  <Description>Source generator to derive form from generic</Description>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

@@ -5,7 +5,7 @@
     },
     "DebugComponent": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "..\\test.Derived\\test.Derived.csproj"
+      "targetProject": "E:\\Dropbox\\ROAMING\\Visual Studio 2022\\Snippers\\Rop.Generators\\Test\\Test.DerivedFrom\\Test.DerivedFrom.csproj"
     }
   }
 }
