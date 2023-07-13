@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Rop.ObservableGenerator": {
+      "commandName": "Project"
+    },
+    "DebugComponent": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "E:\\Dropbox\\ROAMING\\Visual Studio 2022\\Snippers\\Rop.Generators\\Test\\Test.ObservableGenerator\\Test.ObservableGenerator.csproj"
+    }
+  }
+}

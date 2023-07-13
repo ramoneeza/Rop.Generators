@@ -107,5 +107,19 @@ It can be used to provide static extension methods to classes. The current c# la
 
 The nuget package Rop.StaticExtensionGenerator.Annotations is required in order to use the attributes.
 
+Rop.ObservableGenerator
+------------------------
+
+Rop.ObservableGenerator is a source generator package to automatic observable properties.
+It can be used to provide observable properties to classes. The current c# languaje does not allow to create observable properties.
+
+- Define a private field to contain the observable property.
+- Decorates the field with `[AutoObservable]` or `[AutoNotify]`attributes.
+- AutoNotify attribute is intended to be used with INotifyPropertyChanged interface.
+- AutoObservable is to use directly with the `On<PropertyName>Changed` and `event EventHandler?  <PropertyName>Changed` pattern.
+
+The nuget package Rop.ObservableGenerator.Annotations is required in order to use the attributes.
+
+
  ------
  (C)2022 Ramón Ordiales Plaza
