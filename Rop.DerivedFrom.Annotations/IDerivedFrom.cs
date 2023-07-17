@@ -12,4 +12,7 @@ namespace Rop.DerivedFrom.Annotations
     public interface IFormDerivedFrom<out T>
     {
     }
+    public interface IFormFlat<out T>
+    {
+    }
 }

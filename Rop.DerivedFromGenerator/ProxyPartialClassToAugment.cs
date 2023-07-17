@@ -8,12 +8,12 @@ namespace Rop.DerivedFromGenerator
         public PartialClassToAugment Original { get; }
         public TypeSyntax BaseToFlat { get; }
         public string FlatBaseName { get; }
-        public bool IsFormDerivedFrom { get; }
-        public ProxyPartialClassToAugment(PartialClassToAugment original, TypeSyntax baseToFlat, bool isFormDerivedFrom)
+        public string DerivedType { get; }
+        public ProxyPartialClassToAugment(PartialClassToAugment original, TypeSyntax baseToFlat, string derivedtype)
         {
             Original = original;
             BaseToFlat = baseToFlat;
-            IsFormDerivedFrom = isFormDerivedFrom;
+            DerivedType = derivedtype;
             FlatBaseName = new string(baseToFlat.ToString().Select(c => char.IsLetterOrDigit(c) ? c : '_').ToArray());
         }
     }

@@ -9,7 +9,7 @@
 	  <PackageTags>extensions;generics;static;winforms;source-generator;roslyn</PackageTags>
 	  <Description>Source generator to create static extensions</Description>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	  <Version>1.0.9</Version>
+	  <Version>1.0.11</Version>
 	  <Authors>Ramon Ordiales Plaza</Authors>
 	  <Company>Ramon Ordiales Plaza</Company>
 	  <Copyright>2023 Ramon Ordiales</Copyright>

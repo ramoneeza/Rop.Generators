@@ -50,6 +50,26 @@ namespace Rop.Generators.Shared
             }
             return res;
         }
+        public static List<GenericNameSyntax> GenericBasesOfAny(this ClassDeclarationSyntax cds,params string[] typename)
+        {
+            var res=new List<GenericNameSyntax>();
+            if (cds.BaseList is null) return res;
+            foreach (var type in cds.BaseList.Types)
+            {
+                if (type.Type is GenericNameSyntax gns)
+                {
+                    var id=gns.Identifier.ToString();
+                    if (typename.Contains(id))
+                    {
+                        res.Add(gns);
+                    }
+                }
+            }
+            return res;
+        }
+
+
+
         public static string ToStringValue(this ExpressionSyntax expression)
         {
             switch (expression)

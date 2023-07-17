@@ -54,11 +54,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.DerivedFrom.SubForms",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.DerivedFrom.FormDerived", "Test\Test.DerivedFrom.FormDerived\Test.DerivedFrom.FormDerived.csproj", "{BECC3846-2D46-4586-84C4-7E1AE321A96C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rop.ObservableGenerator", "Rop.ObservableGenerator\Rop.ObservableGenerator.csproj", "{0D404D6A-D05F-4163-BD7B-4DAA7D85F81D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.ObservableGenerator", "Rop.ObservableGenerator\Rop.ObservableGenerator.csproj", "{0D404D6A-D05F-4163-BD7B-4DAA7D85F81D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rop.ObservableGenerator.Annotations", "Rop.ObservableGenerator.Annotations\Rop.ObservableGenerator.Annotations.csproj", "{5EFA3272-F68D-41D3-93AE-BCAD2C41C7DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rop.ObservableGenerator.Annotations", "Rop.ObservableGenerator.Annotations\Rop.ObservableGenerator.Annotations.csproj", "{5EFA3272-F68D-41D3-93AE-BCAD2C41C7DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ObservableGenerator", "Test\Test.ObservableGenerator\Test.ObservableGenerator.csproj", "{DFA586D4-8B90-4F2B-BED1-2263BB5DDCFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.ObservableGenerator", "Test\Test.ObservableGenerator\Test.ObservableGenerator.csproj", "{DFA586D4-8B90-4F2B-BED1-2263BB5DDCFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -186,6 +186,7 @@ Global
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{10ed2d2d-6d3d-4570-b78c-f61b52328596}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{568ee803-f01b-4f45-ba81-70642128a797}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{59cbdaf7-857a-47d6-ae57-0d069f5d925f}*SharedItemsImports = 5
+		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{5a2bdd1d-9a9b-42bf-b00c-4104ceb957f6}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{86231b22-cb3a-4de0-af41-c26710435cc9}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{8f79abde-e5ad-421d-be65-0042f27b104b}*SharedItemsImports = 5
 		Rop.Generators.Shared\Rop.Generators.Shared.projitems*{b6fa2a36-63eb-4074-b174-3e85b96e4265}*SharedItemsImports = 13

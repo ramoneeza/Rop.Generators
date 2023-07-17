@@ -194,10 +194,10 @@ namespace Rop.ProxyGenerator
                         $"base.{name}({pnames});");
                 if (!postbase)
                     sb.AppendLines(3,
-                        $"{retstr}{field}.{name}({pnames});");
+                        $"{retstr}{field}?.{name}({pnames});");
                 else
                     sb.AppendLines(3,
-                        $"{field}.{name}({pnames});",
+                        $"{field}?.{name}({pnames});",
                         $"{retstr}base.{name}({pnames});");
             }
 
